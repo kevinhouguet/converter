@@ -1,9 +1,13 @@
 import PropTypes from 'prop-types'
 import './styles.scss'
 
-const Currency = ({currency}) => {
+const Currency = ({currency, onClick}) => {
 	return (
-		<li key={currency.name}>{currency.name}</li>
+		<li
+			className='currency'
+			onClick={(e) => onClick(currency.rate, currency.name)}
+		>
+			{currency.name}</li>
 	)
 }
 

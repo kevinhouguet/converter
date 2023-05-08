@@ -2,14 +2,15 @@ import PropTypes from 'prop-types';
 import './styles.scss'
 import Currency from '../Currency'
 
-const Currencies = ({currencies}) => {
+const Currencies = ({currencies, onClick}) => {
 	return (
 		<div className="currencies">
-			<ul>
+			<ul className='currencies-list'>
 				{currencies.map(currency => (
 					<Currency
 						key={currency.name}
 						currency={currency}
+						onClick={onClick}
 					/>
 				))}
 			</ul>

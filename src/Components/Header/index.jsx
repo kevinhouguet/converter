@@ -9,6 +9,7 @@ const Header = ({title}) => {
 				<label htmlFor="currency" className='header-form-label'>
 					<input
 						className='header-form-label-input'
+						id='number'
 						type="number"
 						step={0.01}
 						min={0.01}
