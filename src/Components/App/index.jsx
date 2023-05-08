@@ -4,6 +4,7 @@ import { useState } from 'react';
 import './styles.scss'
 
 import data from '../../data/currencies';
+import Result from '../Result';
 
 
 function App() {
@@ -12,7 +13,6 @@ function App() {
 	const [result, setResult] = useState(null)
 
 	const handleClick = (rate, currency) => {
-		console.log(rate)
 		const valueInput = document.getElementById('number').value
 		const resultUser = valueInput * rate
 
@@ -25,16 +25,11 @@ function App() {
 	<div className="container">
 		<Header title="Converter"/>
 		<Currencies currencies={data} onClick={handleClick}/>
-		<div className="result">
-			<h1>Result</h1>
-			<div>
-				<ul>
-					<li>{number}</li>
-					<li>{result}</li>
-					<li>{currency}</li>
-				</ul>
-			</div>
-		</div>
+		<Result
+			number={number}
+			currency={currency}
+			result={result}
+		/>
 	</div>
   )
 }

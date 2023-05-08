@@ -1,4 +1,8 @@
 .currencies {
+
+	max-height: calc(100vh - (87px + 128px + 136px));
+	overflow: auto;
+
 	&-list {
 		list-style: none;
 		margin: 0;
